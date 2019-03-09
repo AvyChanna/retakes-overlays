@@ -10,10 +10,10 @@ Shows on roundstart a overlays which bombsite is active.
 
 [B][u]ConVars[/u][/B]
 [code]
-sm_retake_overlays_team - Show overlays only for counter-terrorists  
-sm_retake_overlays_time - How long show the Bombsite overlays? in seconds  
-sm_retake_overlays_path_a - Path to the bombsite A overlay DONT TYPE .vmt or .vft  
-sm_retake_overlays_path_b - Path to the bombsite B overlay DONT TYPE .vmt or .vft  
+sm_retake_overlays_team - Show overlays only for counter-terrorists
+sm_retake_overlays_time - How long show the Bombsite overlays? in seconds
+sm_retake_overlays_path_a - Path to the bombsite A overlay
+sm_retake_overlays_path_b - Path to the bombsite B overlay
 [/code]
 
 [U][B]Required plugins[/B][/U]
@@ -41,12 +41,12 @@ Also big thanks to all sourcemod & metamod developers out there!
 
 [B][U]Installation[/U][/B]
 [QUOTE][LIST=1]
-[*]Open [u]gameserver[/u] folder and copy the folders [B]addons/[/B] & [B]materials/[/B] to [U]your gameservers root[/U] [B]csgo/[/B] directory  
-  
-[*]Open [u]fastDL[/u] folder and copy the folder [B]materials/[/B] to your [U]FastDownload servers[/U] [B]csgo/[/B] directory  
-    
-[*]Run plugin for the first time and [U].cfg file will be generated[/U]  
-  
+[*]Open [u]gameserver[/u] folder and copy the folders [B]addons/[/B] & [B]materials/[/B] to [U]your gameservers root[/U] [B]csgo/[/B] directory
+
+[*]Open [u]fastDL[/u] folder and copy the folder [B]materials/[/B] to your [U]FastDownload servers[/U] [B]csgo/[/B] directory
+
+[*]Run plugin for the first time and [U].cfg file will be generated[/U]
+
 [*]Have fun! Give feedback!
 [/LIST]
 [/QUOTE]

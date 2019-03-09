@@ -2,15 +2,15 @@
  * Retake - Bombsite overlays
  * by: shanapu
  * https://github.com/shanapu/retake-overlays
- * 
+ *
  * Version: 1.0
- * 
+ *
  * Copyright (C) 2017 Thomas Schmidt (shanapu)
  *
  * This program is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License, version 3.0, as published by the
  * Free Software Foundation.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
  * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
@@ -54,14 +54,29 @@ public Plugin myinfo = {
 public void OnPluginStart()
 {
 	CreateConVar("sm_retakes_overlays_version", "1.0", "The version of this SourceMod plugin", FCVAR_DONTRECORD);
-	
+
 	gc_bTeam = CreateConVar("sm_retake_overlays_team", "1", "Show overlays only for counter-terrorists", _, true, 0.0, true, 1.0);
 	gc_fTime = CreateConVar("sm_retake_overlays_time", "5.0", "How long show the Bombsite overlays? in seconds", _, true, 1.0);
-	gc_sPathA = CreateConVar("sm_retake_overlays_path_a", "overlays/retake/a", "Path to the bombsite A overlay DONT TYPE .vmt or .vft");
-	gc_sPathB = CreateConVar("sm_retake_overlays_path_b", "overlays/retake/b", "Path to the bombsite B overlay DONT TYPE .vmt or .vft");
+	gc_sPathA = CreateConVar("sm_retake_overlays_path_a", "overlays/retake/a", "Path to the bombsite A overlay");
+	gc_sPathB = CreateConVar("sm_retake_overlays_path_b", "overlays/retake/b", "Path to the bombsite B overlay");
 
 	gc_sPathA.GetString(g_sPathA, sizeof(g_sPathA));
 	gc_sPathB.GetString(g_sPathB, sizeof(g_sPathB));
+
+	int pos=0;
+	while (g_sPathA[pos])
+	{
+		if (g_sPathA[pos]=='.')
+			g_sPathA[pos] = 0;
+	}
+	pos=0;
+	while (g_sPathB[pos])
+	{
+		if (g_sPathB[pos]=='.')
+			g_sPathB[pos] = 0;
+	}
+
+
 
 	HookConVarChange(gc_sPathA, OnSettingChanged);
 	HookConVarChange(gc_sPathB, OnSettingChanged);

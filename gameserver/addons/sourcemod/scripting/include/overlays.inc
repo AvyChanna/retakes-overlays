@@ -2,15 +2,15 @@
  * Overlays - Include File.
  * by: shanapu
  * https://github.com/shanapu/overlays.inc
- * 
+ *
  * Version: 1.1
- * 
+ *
  * Copyright (C) 2017 Thomas Schmidt (shanapu)
  *
  * This program is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License, version 3.0, as published by the
  * Free Software Foundation.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
  * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
@@ -72,7 +72,7 @@ stock void ShowOverlayAll(char[] path, float lifetime)
 }
 
 // Remove overlay from a client - Timer!
-stock Action DeleteOverlay(Handle timer, any userid) 
+stock Action DeleteOverlay(Handle timer, any userid)
 {
 	int client = GetClientOfUserId(userid);
 	if (client <= 0 || !IsClientInGame(client) || IsFakeClient(client) || IsClientSourceTV(client) || IsClientReplay(client))
